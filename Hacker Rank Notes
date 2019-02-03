@@ -1,0 +1,22 @@
+Date 3/Feb/19
+1:Singly linked list:
+    In singly linked list insterting the data will differ from normal list insert and append. 
+  
+  Normal list insert be like:
+    n=3
+    lis=[16,13,7]
+    data=1
+    position =2
+    lis.insert(position,data)
+    print(lis)
+  
+  In single linked list its define node,head,data, Each list contain first node as data and next will point to next list
+
+    def insertNodeAtPosition(head, data, position):
+    n = head
+    for i in range(position - 1):
+        n=n.next
+        n_next=n.next
+    n.next=SinglyLinkedListNode(data)
+    n.next.next=n_next
+    return head
