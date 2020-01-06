@@ -1,3 +1,21 @@
+class Solution:
+    def groupThePeople(self, groupSizes: List[int]) -> List[List[int]]:
+        check = {}
+
+        res =[]
+        for i in range(len(groupSizes)):
+            s = groupSizes[i]
+            if s not in check:
+                check[s] = []
+            check[s].append(i)
+            if len(check[s])==s:
+                res.append(check[s])
+                check[s]=[]
+        return res
+    
+
+
+
 
 
 class Solution:
